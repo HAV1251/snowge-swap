@@ -4,9 +4,16 @@ import { Card } from '@pancakeswap-libs/uikit'
 
 export const BodyWrapper = styled(Card)`
   position: relative;
-  max-width: 436px;
+  opacity: 0.95;
+  max-width: 1000px;
   width: 100%;
   z-index: 5;
+  transform: scale(1);
+  transition: all 200ms linear;
+  &:hover {
+    transform: scale(1.01);
+    transition: all 200ms linear;
+  }
 `
 
 /**

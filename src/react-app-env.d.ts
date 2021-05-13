@@ -6,6 +6,8 @@ declare module 'jazzicon' {
 
 declare module 'fortmatic'
 
+declare module "*.png";
+
 interface Window {
   ethereum?: {
     isMetaMask?: true

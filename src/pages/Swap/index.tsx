@@ -303,8 +303,8 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader
-            title={TranslateString(8, 'Exchange')}
-            description={TranslateString(1192, 'Trade tokens in an instant')}
+            title={TranslateString(8, 'SnowgeSwap')}
+            description={TranslateString(1192, 'Swap floofs in an instant - the floofiest token trading on BSC.')}
           />
           <CardBody>
             <AutoColumn gap="md">
