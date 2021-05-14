@@ -47,7 +47,7 @@ const Swap = () => {
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
   ]
-  const [dismissTokenWarning, setDismissTokenWarning] = useState<boolean>(false)
+  const [dismissTokenWarning, setDismissTokenWarning] = useState<boolean>(true)
   const [transactionWarning, setTransactionWarning] = useState<{
     selectedToken: string | null
     purchaseType: string | null
