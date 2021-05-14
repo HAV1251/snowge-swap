@@ -1,32 +1,23 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from '@snowge/uikit'
 
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://pancakeswap.finance/',
+    href: 'https://snowgecoin.com/',
   },
   {
-    label: 'Trade',
+    label: 'Swap',
     icon: 'TradeIcon',
-    initialOpenState: true,
-    status: {
-      text: 'MIGRATE',
-      color: 'warning',
-    },
-    items: [
-      {
-        label: 'Exchange',
-        href: '/swap',
-      },
-      {
-        label: 'Liquidity',
-        href: '/pool',
-      },
-    ],
+    href: '/swap',
   },
   {
-    label: 'More',
+    label: 'Liquidity',
+    icon: 'TradeIcon',
+    href: '/pool',
+  },
+  {
+    label: 'FloofyLinks',
     icon: 'MoreIcon',
     items: [
       {
