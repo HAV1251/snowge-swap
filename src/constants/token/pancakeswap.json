@@ -1,9 +1,9 @@
 {
   "name": "SnowgeSwap Default List",
-  "timestamp": "2021-05-11T09:56:23Z",
+  "timestamp": "2021-05-16T09:56:23Z",
   "version": {
     "major": 2,
-    "minor": 10,
+    "minor": 11,
     "patch": 0
   },
   "tags": {},
@@ -57,6 +57,30 @@
       "chainId": 56,
       "decimals": 9,
       "logoURI": "https://snowge.s3.amazonaws.com/SnowgeLogoSwap.png"
+    },
+    {
+      "name": "NCAT",
+      "symbol": "NCAT",
+      "address": "0x0cf011a946f23a03ceff92a4632d5f9288c6c70d",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x0cf011a946f23a03ceff92a4632d5f9288c6c70d.png"
+    },
+    {
+      "name": "Catnip.Money",
+      "symbol": "CATNIP",
+      "address": "0xc91d49653f0364aa9c7877697eb27313c973ad9d",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xc91d49653f0364aa9c7877697eb27313c973ad9d.png"
+    },
+    {
+      "name": "achtools",
+      "symbol": "ACHTOOLS",
+      "address": "0xc13a1b47377a8382bd3f6f9105137c1e838758b9",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://snowge.s3.amazonaws.com/snowgeswap/logos/achtools.png"
     }
   ]
 }
