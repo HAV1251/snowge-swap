@@ -81,6 +81,22 @@
       "chainId": 56,
       "decimals": 8,
       "logoURI": "https://snowge.s3.amazonaws.com/snowgeswap/logos/achtools.png"
+    },
+    {
+      "name": "WeatherBalloon",
+      "symbol": "WBN",
+      "address": "0x40de76628d80ab45d7f4d249f68a812ab626ea31",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://snowge.s3.amazonaws.com/snowgeswap/logos/wbn2.png"
+    },
+    {
+      "name": "LaikaProtocol",
+      "symbol": "LAIKA",
+      "address": "0x2a49De60cc6204c3AFC3e770FDB30A0554147519",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2a49De60cc6204c3AFC3e770FDB30A0554147519.png"
     }
   ]
 }
