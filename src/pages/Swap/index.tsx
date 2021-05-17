@@ -15,8 +15,7 @@ import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWith
 import { ArrowWrapper, BottomGrouping, SwapCallbackError, Wrapper } from 'components/swap/styleds'
 import TradePrice from 'components/swap/TradePrice'
 import TokenWarningModal from 'components/TokenWarningModal'
-import SyrupWarningModal from 'components/SyrupWarningModal'
-import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
+import TokenSlippageModal from 'components/TokenSlippageModal'
 import ProgressSteps from 'components/ProgressSteps'
 import Container from 'components/Container'
 
@@ -226,16 +225,14 @@ const Swap = () => {
     setSwapState((prevState) => ({ ...prevState, tradeToConfirm: trade }))
   }, [trade])
 
-  // This will check to see if the user has selected Syrup or SafeMoon to either buy or sell.
+  // This will check to see if the user has selected Snowge to either buy or sell.
   // If so, they will be alerted with a warning message.
   const checkForWarning = useCallback(
     (selected: string, purchaseType: string) => {
-      if (['SYRUP', 'SAFEMOON'].includes(selected)) {
         setTransactionWarning({
           selectedToken: selected,
           purchaseType,
         })
-      }
     },
     [setTransactionWarning]
   )
@@ -244,12 +241,7 @@ const Swap = () => {
     (inputCurrency) => {
       setApprovalSubmitted(false) // reset 2 step UI for approvals
       onCurrencySelection(Field.INPUT, inputCurrency)
-      if (inputCurrency.symbol === 'SYRUP') {
-        checkForWarning(inputCurrency.symbol, 'Selling')
-      }
-      if (inputCurrency.symbol === 'SAFEMOON') {
-        checkForWarning(inputCurrency.symbol, 'Selling')
-      }
+      checkForWarning(inputCurrency.symbol, 'Selling')
     },
     [onCurrencySelection, setApprovalSubmitted, checkForWarning]
   )
@@ -263,12 +255,7 @@ const Swap = () => {
   const handleOutputSelect = useCallback(
     (outputCurrency) => {
       onCurrencySelection(Field.OUTPUT, outputCurrency)
-      if (outputCurrency.symbol === 'SYRUP') {
-        checkForWarning(outputCurrency.symbol, 'Buying')
-      }
-      if (outputCurrency.symbol === 'SAFEMOON') {
-        checkForWarning(outputCurrency.symbol, 'Buying')
-      }
+      checkForWarning(outputCurrency.symbol, 'Buying')
     },
     [onCurrencySelection, checkForWarning]
   )
@@ -280,12 +267,11 @@ const Swap = () => {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      <SyrupWarningModal
-        isOpen={transactionWarning.selectedToken === 'SYRUP'}
-        transactionType={transactionWarning.purchaseType}
+      <TokenSlippageModal
+        tokenName={transactionWarning.selectedToken}
+        isOpen={transactionWarning.selectedToken != null}
         onConfirm={handleConfirmWarning}
       />
-      <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
       <CardNav />
       <AppBody>
         <Wrapper id="swap-page">
